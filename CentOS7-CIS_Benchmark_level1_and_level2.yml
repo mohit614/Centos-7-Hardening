@@ -8,7 +8,7 @@
     ignore_unreachable: true
   roles:
 # Match role folder name here - CentOS7-CIS
-    - role: CentOS7-CIS
+    - role: Centos-7-Hardening
   tags:
     - always
     - prelim_tasks
