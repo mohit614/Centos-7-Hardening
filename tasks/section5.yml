@@ -289,7 +289,6 @@
     dest: /etc/ssh/sshd_config
     regexp: '^MACs'
     line: 'MACs {{ centos7cis_ssh_mac_algorithms | quote }}'
-    #line: 'MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com'
   when:
     - centos7cis_level1 is defined and centos7cis_level1
     - centos7cis_ssh_mac_algorithms is defined
@@ -298,11 +297,11 @@
     - patch
     - rule_5.2.11
 
-- name: "SCORED | 5.2.11 | PATCH | Ensure only approved MAC algorithms are used"
+- name: "SCORED | 5.2.11 | PATCH | Ensure strong approved Ciphers are used"
   lineinfile:
     state: present
     dest: /etc/ssh/sshd_config
-    regexp: '^Ciphers'
+    insertafter: "# Ciphers"
     line: 'Ciphers {{ centos7cis_ssh_ciphers | quote }}'
   when:
     - centos7cis_level1 is defined and centos7cis_level1
