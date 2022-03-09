@@ -298,6 +298,22 @@
     - patch
     - rule_5.2.11
 
+- name: "SCORED | 5.2.11 | PATCH | Ensure only approved MAC algorithms are used"
+  lineinfile:
+    state: present
+    dest: /etc/ssh/sshd_config
+    regexp: '^Ciphers'
+    line: 'Ciphers {{ centos7cis_ssh_ciphers | quote }}'
+  when:
+    - centos7cis_level1 is defined and centos7cis_level1
+    - centos7cis_ssh_mac_algorithms is defined
+  tags:
+    - level1
+    - patch
+    - rule_5.2.11
+
+
+
 - name: "SCORED | 5.2.12 | PATCH | Ensure SSH Idle Timeout Interval is configured"
   lineinfile:
     state: absent
