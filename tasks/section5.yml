@@ -405,8 +405,10 @@
     - rule_5.2.13
 
 - name: "SCORED | 5.2.14 | PATCH | Ensure SSH access is limited"
-  command: /bin/true
-  changed_when: no
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: "^AllowUsers"
+    line: "AllowUsers centos"
   when:
     - centos7cis_level1 is defined and centos7cis_level1
   tags:
