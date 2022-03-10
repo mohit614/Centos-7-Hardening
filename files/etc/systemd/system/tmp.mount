@@ -18,7 +18,7 @@ Before=local-fs.target umount.target
 What=tmpfs
 Where=/tmp
 Type=tmpfs
-Options=mode=1777,strictatime,noexec,nodev,nosuid
+Options=mode=1777,strictatime,nodev,nosuid #removing noexec as its breaking docker-compose Ref: https://stackoverflow.com/questions/57796839/docker-compose-error-while-loading-shared-libraries-libz-so-1-failed-to-map-s
 
 # Make 'systemctl enable tmp.mount' work:
 [Install]

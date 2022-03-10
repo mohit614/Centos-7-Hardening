@@ -208,7 +208,7 @@ centos7cis_ssh_ciphers: "aes256-ctr,aes192-ctr,aes128-ctr"
 centos7cis_password_creation_requirements: true
 
 # Section 5.4.1.1 | Ensure password expiration is 365 days or less
-centos7cis_password_expiration: false
+centos7cis_password_expiration: true
 
 # Section 5.4.1.2 | Ensure minimum days between password changes is 7 or more
 centos7cis_password_minimum_days_password_change: true
