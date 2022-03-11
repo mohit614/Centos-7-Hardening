@@ -71,7 +71,7 @@ centos7cis_disable_service_checks: true
 
 # Set this value to true if the machine is joined to AD/LDAP server.
 # Set this value to false if the machine is not joined to AD/LDAP server.
-centos7cis_ad_ldap_joined_machine: true
+centos7cis_ad_ldap_joined_machine: fase
 
 # Service configuration booleans set true to keep service
 centos7cis_cups_server: false
@@ -217,7 +217,7 @@ centos7cis_password_minimum_days_password_change: true
 centos7cis_ensure_system_accounts_are_non_login: true
 
 # Section 5.4.4 | Ensure default user umask is 027 or more restrictive
-centos7cis_modify_default_user_umask: true
+centos7cis_modify_default_user_umask: false
 centos7cis_default_user_umask: 027
 
 
