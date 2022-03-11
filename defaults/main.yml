@@ -217,7 +217,7 @@ centos7cis_password_minimum_days_password_change: true
 centos7cis_ensure_system_accounts_are_non_login: true
 
 # Section 5.4.4 | Ensure default user umask is 027 or more restrictive
-centos7cis_modify_default_user_umask: false
+centos7cis_modify_default_user_umask: true
 centos7cis_default_user_umask: 027
 
 
