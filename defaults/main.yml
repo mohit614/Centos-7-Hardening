@@ -71,7 +71,7 @@ centos7cis_disable_service_checks: true
 
 # Set this value to true if the machine is joined to AD/LDAP server.
 # Set this value to false if the machine is not joined to AD/LDAP server.
-centos7cis_ad_ldap_joined_machine: fase
+centos7cis_ad_ldap_joined_machine: false
 
 # Service configuration booleans set true to keep service
 centos7cis_cups_server: false
